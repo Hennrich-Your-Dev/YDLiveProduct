@@ -9,17 +9,19 @@
 import UIKit
 
 public class YDHeaderConfigurationModel {
-    
-    let width: CGFloat?
-    let height: CGFloat
-    let title: String
-    
-    public init(withWidth width: CGFloat? = nil,
-                withHeight height: CGFloat = 60,
-                withTitle title: String) {
-        self.width = width
-        self.height = height
-        self.title = title
-    }
-    
+
+	let width: CGFloat?
+	let height: CGFloat
+	let title: String
+
+	public init(
+		withWidth width: CGFloat? = nil,
+		withHeight height: CGFloat = 60,
+		withTitle title: String
+	) {
+		self.width = width
+		self.height = height
+		self.title = title
+	}
+
 }

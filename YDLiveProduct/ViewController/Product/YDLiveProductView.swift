@@ -110,9 +110,11 @@ public class YDLiveProductView: UIView {
 		setRoundCorners(for: contentView, radius: config.radius)
 		contentView.layer.applySketchShadow(color: .black, alpha: 0.08, x: 0, y: 6, blur: 20, spread: -1)
 
-		photoImageView.setImageFromUrl(product.images?.first?.medium)
+		photoImageView.setImageFromUrl(product.images?.first)
 		photoImageView.layer.cornerRadius = config.radius
 		photoMaskView.layer.cornerRadius = config.radius
+
+		changeAddToCartButtonStyle(with: product)
 
 		if let ean = product.ean {
 			productEAN.text = "código: \(ean)"
@@ -140,24 +142,46 @@ public class YDLiveProductView: UIView {
 
 		if let rating = product.rating {
 			ratingView.rating = rating.average
+		} else {
+			ratingView.isHidden = true
 		}
+	}
 
+	private func changeAddToCartButtonStyle(with product: YDLiveProductModel) {
+		if product.onBasket {
+			addButton.layer.borderColor = UIColor.gray.cgColor
+			addButton.setTitle("retirar da cesta", for: .normal)
+			addButton.setTitleColor(UIColor.gray, for: .normal)
+
+		} else {
+			addButton.layer.borderColor = UIColor.Product.red.cgColor
+			addButton.setTitle("adicionar a cesta", for: .normal)
+			addButton.setTitleColor(UIColor.Product.red, for: .normal)
+		}
 	}
 
 	// MARK: IBActions
 	@IBAction func addProduct(_ sender: UIButton) {
-		//        guard let product = config?.product else {
-		//            return
-		//        }
-		//
-		//        const cartData = {
-		//          productId: productId,
-		//          sku: sku,
-		//          seller: sellerId,
-		//          skipServiceSelling: true,
-		//          openCartScreenAfterAdd: false,
-		//        }
-		//        IntegrationHelper.addProductToCart(cartData)
+		guard let product = config?.product else {
+				return
+		}
+
+		let parameters: [String: Any] = [
+			"addToCard": product.onBasket,
+			"productId": product.id ?? "",
+			"sku": product.ean ?? "",
+			"skipServiceSelling": true,
+			"openCartScreenAfterAdd": false
+		]
+
+		NotificationCenter.default.post(
+			name: NSNotification.Name("YDLiveAddToCartObserver"),
+			object: nil,
+			userInfo: parameters
+		)
+
+		product.onBasket = !product.onBasket
+		changeAddToCartButtonStyle(with: product)
 	}
 
 	// MARK: Public actions

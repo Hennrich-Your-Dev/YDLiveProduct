@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,13 +14,10 @@
 		C17C6F2B251BF98A0089C7C6 /* YDLiveProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = C17C6F1D251BF98A0089C7C6 /* YDLiveProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C17C6F35251CC2C00089C7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17C6F34251CC2C00089C7C6 /* Assets.xcassets */; };
 		C17C6F51251CC2C80089C7C6 /* YDLiveProductModelRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C6F37251CC2C80089C7C6 /* YDLiveProductModelRating.swift */; };
-		C17C6F52251CC2C80089C7C6 /* YDLiveProductModelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C6F38251CC2C80089C7C6 /* YDLiveProductModelImage.swift */; };
 		C17C6F53251CC2C80089C7C6 /* YDLiveProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C6F39251CC2C80089C7C6 /* YDLiveProductModel.swift */; };
 		C17C6F54251CC2C80089C7C6 /* YDHeaderConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C6F3A251CC2C80089C7C6 /* YDHeaderConfigurationModel.swift */; };
 		C17C6F55251CC2C80089C7C6 /* YDLiveProductConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C6F3B251CC2C80089C7C6 /* YDLiveProductConfigurationModel.swift */; };
-		C17C6F56251CC2C80089C7C6 /* YDLiveProductModelDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C6F3C251CC2C80089C7C6 /* YDLiveProductModelDetails.swift */; };
 		C17C6F57251CC2C80089C7C6 /* YDAPILiveProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C6F3E251CC2C80089C7C6 /* YDAPILiveProduct.swift */; };
-		C17C6F58251CC2C80089C7C6 /* YDLiveProductModelAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C6F3F251CC2C80089C7C6 /* YDLiveProductModelAttributes.swift */; };
 		C17C6F59251CC2C80089C7C6 /* YDHeaderTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = C17C6F42251CC2C80089C7C6 /* YDHeaderTitle.xib */; };
 		C17C6F5A251CC2C80089C7C6 /* YDLiveProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C17C6F44251CC2C80089C7C6 /* YDLiveProductView.xib */; };
 		C17C6F5B251CC2C80089C7C6 /* YDHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C6F47251CC2C80089C7C6 /* YDHeaderTitle.swift */; };
@@ -57,13 +54,10 @@
 		C17C6F2A251BF98A0089C7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C17C6F34251CC2C00089C7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C17C6F37251CC2C80089C7C6 /* YDLiveProductModelRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDLiveProductModelRating.swift; sourceTree = "<group>"; };
-		C17C6F38251CC2C80089C7C6 /* YDLiveProductModelImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDLiveProductModelImage.swift; sourceTree = "<group>"; };
 		C17C6F39251CC2C80089C7C6 /* YDLiveProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDLiveProductModel.swift; sourceTree = "<group>"; };
 		C17C6F3A251CC2C80089C7C6 /* YDHeaderConfigurationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDHeaderConfigurationModel.swift; sourceTree = "<group>"; };
 		C17C6F3B251CC2C80089C7C6 /* YDLiveProductConfigurationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDLiveProductConfigurationModel.swift; sourceTree = "<group>"; };
-		C17C6F3C251CC2C80089C7C6 /* YDLiveProductModelDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDLiveProductModelDetails.swift; sourceTree = "<group>"; };
 		C17C6F3E251CC2C80089C7C6 /* YDAPILiveProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDAPILiveProduct.swift; sourceTree = "<group>"; };
-		C17C6F3F251CC2C80089C7C6 /* YDLiveProductModelAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDLiveProductModelAttributes.swift; sourceTree = "<group>"; };
 		C17C6F42251CC2C80089C7C6 /* YDHeaderTitle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YDHeaderTitle.xib; sourceTree = "<group>"; };
 		C17C6F44251CC2C80089C7C6 /* YDLiveProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YDLiveProductView.xib; sourceTree = "<group>"; };
 		C17C6F47251CC2C80089C7C6 /* YDHeaderTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDHeaderTitle.swift; sourceTree = "<group>"; };
@@ -104,7 +98,6 @@
 				54B30043650613969F7BCC76 /* Pods-YDLiveProductTests.debug.xcconfig */,
 				A8792CDB65F0C4B612A6B9F4 /* Pods-YDLiveProductTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -252,11 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				C17C6F37251CC2C80089C7C6 /* YDLiveProductModelRating.swift */,
-				C17C6F38251CC2C80089C7C6 /* YDLiveProductModelImage.swift */,
 				C17C6F39251CC2C80089C7C6 /* YDLiveProductModel.swift */,
 				C17C6F3B251CC2C80089C7C6 /* YDLiveProductConfigurationModel.swift */,
-				C17C6F3C251CC2C80089C7C6 /* YDLiveProductModelDetails.swift */,
-				C17C6F3F251CC2C80089C7C6 /* YDLiveProductModelAttributes.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -443,15 +433,12 @@
 				C17C6F54251CC2C80089C7C6 /* YDHeaderConfigurationModel.swift in Sources */,
 				C17C6F57251CC2C80089C7C6 /* YDAPILiveProduct.swift in Sources */,
 				C17C6F55251CC2C80089C7C6 /* YDLiveProductConfigurationModel.swift in Sources */,
-				C17C6F52251CC2C80089C7C6 /* YDLiveProductModelImage.swift in Sources */,
 				C17C6F60251CC2C80089C7C6 /* UIViewExtension.swift in Sources */,
-				C17C6F56251CC2C80089C7C6 /* YDLiveProductModelDetails.swift in Sources */,
 				C17C6F53251CC2C80089C7C6 /* YDLiveProductModel.swift in Sources */,
 				C17C6F5D251CC2C80089C7C6 /* UIImageViewExtension.swift in Sources */,
 				C17C6F61251CC2C80089C7C6 /* UIImageExtension.swift in Sources */,
 				C17C6F5F251CC2C80089C7C6 /* CALayerExtension.swift in Sources */,
 				C17C6F51251CC2C80089C7C6 /* YDLiveProductModelRating.swift in Sources */,
-				C17C6F58251CC2C80089C7C6 /* YDLiveProductModelAttributes.swift in Sources */,
 				C17C6F5B251CC2C80089C7C6 /* YDHeaderTitle.swift in Sources */,
 				C17C6F5C251CC2C80089C7C6 /* YDLiveProductView.swift in Sources */,
 				C17C6F5E251CC2C80089C7C6 /* UIColorExtension.swift in Sources */,
