@@ -17,6 +17,7 @@ public class YDLiveProductModel: Codable {
 	public var priceConditions: String?
 	public var ean: String?
 	public var rating: YDLiveProductModelRating?
+	public var partnerId: String?
 	public var onBasket: Bool = true
 
 	public init(
@@ -28,6 +29,7 @@ public class YDLiveProductModel: Codable {
 		priceConditions: String?,
 		ean: String?,
 		rating: YDLiveProductModelRating?,
+		partnerId: String?,
 		onBasket: Bool = false) {
 
 		self.description = description
@@ -38,8 +40,8 @@ public class YDLiveProductModel: Codable {
 		self.priceConditions = priceConditions
 		self.ean = ean
 		self.rating = rating
+		self.partnerId = partnerId
 		self.onBasket = onBasket
-
 	}
 
 	required public init(from decoder: Decoder) throws {
@@ -69,9 +71,10 @@ public class YDLiveProductModel: Codable {
 		rating = try? container.decode(YDLiveProductModelRating.self,
 																	 forKey: .rating)
 
+		partnerId = try? container.decode(String.self, forKey: .partnerId)
+
 		onBasket = false
 	}
-
 }
 
 extension YDLiveProductModel {
@@ -85,29 +88,4 @@ extension YDLiveProductModel {
 
 		return formatter.string(for: price)
 	}
-
-	public func getHtmlDescription() -> NSMutableAttributedString? {
-		guard let description = description?.data(using: .utf8) else { return nil }
-
-		do {
-			let attributedString = try NSMutableAttributedString(
-				data: description,
-				options: [
-					.documentType: NSAttributedString.DocumentType.html,
-					.characterEncoding: String.Encoding.utf8.rawValue
-				],
-				documentAttributes: nil
-			)
-
-			let paragraphStyle = NSMutableParagraphStyle()
-			paragraphStyle.lineSpacing = 3
-
-			attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-
-			return attributedString
-		} catch {
-			return NSMutableAttributedString()
-		}
-	}
-
 }

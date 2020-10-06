@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YDLiveProduct"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary      = "Product for B2W."
   spec.homepage     = "https://yourdev.com.br"
   spec.license      = "MIT"
