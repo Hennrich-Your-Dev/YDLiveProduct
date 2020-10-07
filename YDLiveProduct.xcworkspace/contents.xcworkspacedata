@@ -5,6 +5,9 @@
       location = "group:YDLiveProduct.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:YDLiveProduct.podspec">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

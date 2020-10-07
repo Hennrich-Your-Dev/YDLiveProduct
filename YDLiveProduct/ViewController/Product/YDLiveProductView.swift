@@ -150,7 +150,7 @@ public class YDLiveProductView: UIView {
 	private func changeAddToCartButtonStyle(with product: YDLiveProductModel) {
 		if product.onBasket {
 			addButton.layer.borderColor = UIColor.gray.cgColor
-			addButton.setTitle("Adicionado à cesta", for: .normal)
+			addButton.setTitle("adicionado à cesta", for: .normal)
 			addButton.setTitleColor(UIColor.gray, for: .normal)
 
 		} else {
@@ -166,6 +166,8 @@ public class YDLiveProductView: UIView {
 				return
 		}
 
+		product.onBasket.toggle()
+
 		let parameters: [String: Any] = [
 			"addToCard": product.onBasket,
 			"productId": product.id ?? "",
@@ -180,7 +182,6 @@ public class YDLiveProductView: UIView {
 			userInfo: parameters
 		)
 
-		product.onBasket = !product.onBasket
 		changeAddToCartButtonStyle(with: product)
 	}
 
