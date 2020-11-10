@@ -140,11 +140,12 @@ public class YDLiveProductView: UIView {
 			productPriceConditions.isHidden = true
 		}
 
-		if let rating = product.rating {
-			ratingView.rating = rating.average
-		} else {
-			ratingView.isHidden = true
-		}
+    if let rating = product.rating,
+       rating.reviews >= 1 {
+      ratingView.rating = rating.average
+    } else {
+      ratingView.isHidden = true
+    }
 	}
 
 	private func changeAddToCartButtonStyle(with product: YDLiveProductModel) {
@@ -152,6 +153,7 @@ public class YDLiveProductView: UIView {
 			addButton.layer.borderColor = UIColor.gray.cgColor
 			addButton.setTitle("adicionado à cesta", for: .normal)
 			addButton.setTitleColor(UIColor.gray, for: .normal)
+			addButton.isEnabled = false
 
 		} else {
 			addButton.layer.borderColor = UIColor.Product.red.cgColor
@@ -190,5 +192,4 @@ public class YDLiveProductView: UIView {
 		self.config = config
 		applyProduct()
 	}
-
 }
