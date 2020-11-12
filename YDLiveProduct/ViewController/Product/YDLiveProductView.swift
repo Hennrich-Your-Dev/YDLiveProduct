@@ -174,6 +174,7 @@ public class YDLiveProductView: UIView {
 			"addToCard": product.onBasket,
 			"productId": product.id ?? "",
 			"sku": product.ean ?? "",
+      "seller": product.partnerId ?? "",
 			"skipServiceSelling": true,
 			"openCartScreenAfterAdd": false
 		]
